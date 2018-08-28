@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "am.dx.miltonarce.wwwww"
+        version   = "0.0.1">
+    <name>Pets Tasks</name>
+    <description>
+        Con esta aplicación podrá registrar todas tus mascotas y tareas, vacunas, alimentos correspondientes a cada una de ellas.
+       
+    </description>
+    <author href="http://www.davinci.edu.ar" email="miltonhernan.arce@gmail.com">
+        	Milton Arce  - Escuela Da Vinci
+    </author>
+	<platform name="android" />
+	<platform name="winphone" />
+    <preference name="permissions" value="none"/>
+    <feature name="http://api.phonegap.com/1.0/device" />
+	<feature name="http://api.phonegap.com/1.0/battery" />
+	<feature name="http://api.phonegap.com/1.0/camera" />
+	<feature name="http://api.phonegap.com/1.0/contacts" />
+	<feature name="http://api.phonegap.com/1.0/file" />
+	<feature name="http://api.phonegap.com/1.0/geolocation" />
+	<feature name="http://api.phonegap.com/1.0/notification" />
+	<preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="orientation" value="portrait" /> 
+    <preference name="target-device" value="universal" /> 
+    <preference name="fullscreen" value="false" /> 
+    <preference name="android-minSdkVersion" value="7" /> 
+    <preference name="android-installLocation" value="auto" />
+	<preference name="splashScreenDelay" value="5000" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#fbc5ad" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <icon src="img/logo.png" />
+  	<gap:splash src="splash.png" />
+	<gap:splash src="img/splash.png" 
+		gap:platform="android" gap:density="mdpi" />
+	<access origin="https://google.com" />
+	<access origin="http://maps.google.com" />
+	<access origin="http://*.google.com" />
+
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

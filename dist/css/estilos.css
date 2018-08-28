@@ -1,0 +1,117 @@
+@font-face {
+  font-family: if;
+  src: url("../fonts/ph.ttf");
+}
+@font-face {
+  font-family: gh;
+  src: url("../fonts/gh.ttf");
+}
+body {
+  font-family: if;
+  font-size: 16px;
+}
+/* {
+  background: #ed4264; 
+  background: -webkit-linear-gradient(
+    to right,
+    #ffedbc,
+    #ed4264
+  ); 
+  background: linear-gradient(
+    to right,
+    #ffedbc,
+    #ed4264
+  ); 
+}*/
+select,
+textarea {
+  border-color: #ff4d4d;
+}
+textarea {
+  display: block;
+  margin: 20px auto;
+}
+.sel {
+  width: 180px;
+  margin: 0px auto;
+}
+.sel2 {
+  width: 203px;
+  margin: 0px auto;
+}
+.lab {
+  display: block;
+}
+.labr {
+  margin-left: 20px;
+}
+.input__label--hoshi-color-1::after {
+  border-color: #ff4d4d;
+}
+a.list-group-item {
+  color: #ff4d4d;
+}
+.panel-title,
+.scrollable-header {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+}
+.sidebar-left {
+  background: #ff4d4d;
+}
+.list-group-item.active {
+  background: #ffedbc;
+  color: #ff4d4d;
+  border-color: #ffedbc;
+}
+.navbar-app {
+  background: #ff4d4d;
+}
+.navbar-app .btn {
+  color: white;
+}
+.navbar-app span {
+  color: white;
+}
+.panel-default {
+  border-color: #ff4d4d;
+}
+.panel {
+  background: whitesmoke;
+  color: #ff4d4d;
+}
+.panel-default > .panel-heading {
+  background: #ffedbc;
+  color: #ff4d4d;
+}
+.ipg {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+}
+.inf {
+  color: white;
+  font-family: gh;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.btn-primary {
+  background: #ff4d4d;
+  border-color: #ff4d4d;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  background: #f37878;
+  border-color: #f37878;
+}
+.section {
+  background: none;
+}
+.app {
+  background: WHITE;
+}

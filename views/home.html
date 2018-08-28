@@ -1,0 +1,33 @@
+<div ui-content-for="title">
+  <span>Mis mascotas</span>
+</div>
+<div class="scrollable" ng-controller="pcontroller">
+  <div class="scrollable-content">
+    <div class="section section">
+
+      <div class="panel-group" ui-state="myAccordion" ui-default='0'>
+
+        <div class="panel panel-default" ng-repeat="item in mostrar ">
+          <div class="panel-heading" ui-set="{'myAccordion': {{$index}}}">
+
+            <h4 class="panel-title">
+              {{item.nombre}}
+            </h4>
+          </div>
+
+          <div ui-if="myAccordion == {{$index}}">
+            <div class="panel-body">
+              <p>Edad: {{item.edad}}</p>
+              <p>Tipo : {{item.tipo }}</p>
+              <p>Raza : {{item.nombreraza }}</p>
+              <p>Comentarios : {{item.comentarios }}</p>
+              <button class="btn btn-primary" ng-click="editar(item)">Editar</button>
+              <button class="btn btn-primary" ng-click="borrar(item)">Borrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>

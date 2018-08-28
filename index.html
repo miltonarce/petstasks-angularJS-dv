@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pets Tasks</title>
+  <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.css" />
+  <script src="dist/js/angular.js"></script>
+  <script src="dist/js/angular-route.js"></script>
+  <link rel='stylesheet' href='dist/css/ng-input.css' />
+  <link rel="stylesheet" href="public/components/mdi/css/materialdesignicons.min.css" media='all' />
+  <link rel="stylesheet" href="dist/css/estilos.css" />
+  <script src='dist/ng-input.js'></script>
+  <script src="dist/js/mobile-angular-ui.min.js"></script>
+  <script src="dist/js/angular-uuid2.js"></script>
+  <script src="dist/js/mobile-angular-ui.gestures.min.js"></script>
+  <script src="controllers/pcontroller.js"></script>
+</head>
+
+<body ng-app="miApp" ng-controller="pcontroller" ui-prevent-touchmove-defaults>
+  <div ng-include="'includes/sidebar.html'" ui-track-as-search-param='true' class="sidebar sidebar-left">
+  </div>
+  <div class="app" ui-swipe-right='Ui.turnOn("uiSidebarLeft")' ui-swipe-left='Ui.turnOff("uiSidebarLeft")'>
+    <div class="navbar navbar-app navbar-absolute-top">
+      <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+        Pets Tasks
+      </div>
+      <div class="btn-group pull-left">
+        <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+          <i class="fa fa-bars"></i> Menu
+        </div>
+      </div>
+    </div>
+    <div class="app-body" ng-class="{loading: loading}">
+      <div ng-show="loading" class="app-content-loading">
+        <i class="fa fa-spinner fa-spin loading-spinner"></i>
+
+      </div>
+      <div class="app-content">
+        <ng-view></ng-view>
+      </div>
+    </div>
+  </div>
+  <div ui-yield-to="modals"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<div ui-content-for="title">
+  <span>Editar Mascotas</span>
+</div>
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="scrollable">
+      <div class="scrollable-content section">
+
+        <p>Edite los datos de sus mascotas</p>
+        <form name="formulario" ng-submit="update(parametros)" novalidate>
+
+          <div class="form-group">
+            <ng-input theme='hoshi' label='Nombre' ng-required="si" ng-minlength=3 ng-model="parametros.nombre" name="nombre"></ng-input>
+            <div class="error" ng-show="formulario.nombre.$invalid && formulario.nombre.$dirty">
+              <span ng-show="formulario.nombre.$error.required">Campo obligatorio</span>
+              <span ng-show="formulario.nombre.$error.minlength">Minimo 3 caracteres</span>
+            </div>
+            <ng-input theme='hoshi' label='Edad' ng-required="si" ng-model="parametros.edad" name="edad"></ng-input>
+            <div class="error" ng-show="formulario.edad.$invalid && formulario.edad.$dirty">
+              <span ng-show="formulario.edad.$error.required">Campo obligatorio</span>
+              <span ng-show="formulario.edad.$error.edad">No tiene formato de edad</span>
+            </div>
+            <div class="form-group">
+              <label>Raza</label>
+              <div class="sel">
+                <select class="input-group" ng-model="parametros.raza" name="raza" required>
+                  <option value="" selected="selected">---Selecciona la raza---</option>
+                  <option ng-repeat="item in razas" value="{{item.id}}" ng-init="id= $index">{{item.nombreraza}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="lab">Tipo</label>
+              <div class="sel">
+                <span class="labr">Perro</span>
+                <input ng-model="parametros.tipo" type="radio" value="Perro" name="tipo" checked />
+                <span class="labr">Gato</span>
+                <input ng-model="parametros.tipo" type="radio" value="Gato" name="tipo" />
+              </div>
+            </div>
+            <div>
+              <textarea ng-model="parametros.comentarios" name="comentarios" rows="5" cols="30"></textarea>
+            </div>
+            <!-- <div>
+              <input ng-model="datos.imagen" type="file" name="imagen" />
+            </div>-->
+            <button class="btn btn-primary btn-block" ng-disabled="formulario.$invalid">Guardar</button>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

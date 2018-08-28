@@ -1,0 +1,57 @@
+<div ui-content-for="title">
+  <span>Mis Comidas</span>
+</div>
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="scrollable">
+      <div class="scrollable-content section" ng-controller="cargarcomidas">
+
+        <p>Ingrese las comidas de sus mascotas.</p>
+        <form name="formulario" ng-submit="guardarC(datosc)" novalidate>
+          <div class="form-group">
+            <label>Mascota</label>
+            <select class="input-group sel2" ng-model="datosc.idm" name="idm">
+              <option value="" selected="selected">---Selecciona la tu mascota---</option>
+              <option ng-repeat="i in mostrar" value="{{i.id}}" ng-init="id= $index">{{i.nombre}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Alimento</label>
+            <select class="input-group sel" ng-model="datosc.idc" name="idc">
+              <option value="" selected="selected">---Selecciona el Alimento---</option>
+              <option ng-repeat="x in datosc" value="{{x.id}}" ng-init="id= $index">{{x.nombrecomida}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Comentarios</label>
+            <textarea ng-model="datosc.comentarios" name="comentarios" rows="5" cols="30"></textarea>
+
+          </div>
+          <button class="btn btn-primary btn-block" ng-disabled="formulario.$invalid">Guardar</button>
+        </form>
+
+
+        <div class="panel-group" ui-state="myAccordion" ui-default='0'>
+
+          <div class="panel panel-default" ng-repeat="item in mcomidas ">
+            <div class="panel-heading" ui-set="{'myAccordion': {{$index}}}">
+
+              <h4 class="panel-title">
+                {{item.nombre}}
+              </h4>
+            </div>
+
+            <div ui-if="myAccordion == {{$index}}">
+              <div class="panel-body">
+                <p>Alimento: {{item.nombrecomida}}</p>
+                <p>Comentarios : {{item.comentarios }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
